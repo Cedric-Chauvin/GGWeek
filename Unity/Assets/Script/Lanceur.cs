@@ -7,17 +7,15 @@ public class Lanceur : MonoBehaviour
     GameObject a;
     public GameObject bombe;
     public Transform fleche;
-    Vector3 initPos;
 
     private void Awake()
     {
-        a = transform.Find("a").gameObject;
+        a = fleche.transform.Find("a").gameObject;
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        initPos = fleche.position + new Vector3(-1.5f,0,0) ;
     }
 
     // Update is called once per frame
@@ -30,15 +28,18 @@ public class Lanceur : MonoBehaviour
         if (Input.GetButton("Vertical"))
         {
             if(Input.GetAxis("Vertical")>0)
-                fleche.RotateAround(initPos, Vector3.forward, 10);
+                fleche.RotateAround(transform.position, Vector3.forward, 10);
             else
-                fleche.RotateAround(initPos, Vector3.forward, -10);
+                fleche.RotateAround(transform.position, Vector3.forward, -10);
         }
     }
 
     void Shoot()
     {
-        Instantiate(bombe, a.transform.position, transform.rotation);
+        GameObject instance = Instantiate(bombe, a.transform.position,transform.rotation);
+        Rigidbody2D rb = instance.GetComponent<Rigidbody2D>();
+        rb.velocity += new Vector2((fleche.position - transform.position).x,(fleche.position - transform.position).y)*2;
+        Destroy(instance, 5);
     }
 
 }
