@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class Lanceur : MonoBehaviour
 {
+    GameObject a;
+    public GameObject bombe;
     public Transform fleche;
     Vector3 initPos;
+
+    private void Awake()
+    {
+        a = transform.Find("a").gameObject;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +24,9 @@ public class Lanceur : MonoBehaviour
     void Update()
     {
 
+        if (Input.GetKeyDown(KeyCode.Space))
+            Shoot();
+
         if (Input.GetButton("Vertical"))
         {
             if(Input.GetAxis("Vertical")>0)
@@ -24,6 +34,11 @@ public class Lanceur : MonoBehaviour
             else
                 fleche.RotateAround(initPos, Vector3.forward, -10);
         }
+    }
+
+    void Shoot()
+    {
+        Instantiate(bombe, a.transform.position, transform.rotation);
     }
 
 }
