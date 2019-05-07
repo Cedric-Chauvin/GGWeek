@@ -7,6 +7,8 @@ public class Lanceur : MonoBehaviour
     GameObject a;
     public GameObject bombe;
     public Transform fleche;
+    public float rotationSpeed = 10.0f;
+    private float rotationSpeedSign = 1f;
 
     private void Awake()
     {
@@ -25,13 +27,32 @@ public class Lanceur : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
             Shoot();
 
-        if (Input.GetButton("Vertical"))
+        fleche.RotateAround(transform.position, Vector3.forward, rotationSpeed * rotationSpeedSign);
+
+        float angle = fleche.eulerAngles.z;
+
+        if (angle >= 180)
+        {
+            angle -= 360;
+        }
+
+        Debug.Log(angle);
+        if (angle >= 30)
+        {
+            rotationSpeedSign = -1f;
+        }
+        else if(angle <= -30)
+        {
+            rotationSpeedSign = 1f;
+        }
+
+        /*if (Input.GetButton("Vertical"))
         {
             if(Input.GetAxis("Vertical")>0)
                 fleche.RotateAround(transform.position, Vector3.forward, 10);
             else
                 fleche.RotateAround(transform.position, Vector3.forward, -10);
-        }
+        }*/
     }
 
     void Shoot()
