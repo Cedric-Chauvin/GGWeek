@@ -37,7 +37,7 @@ public class bombe : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == 10)
+        if (Layers == (Layers | (1 << collision.gameObject.layer)))
         {
             D2dDestructible.StampAll(transform.position, Size, Angle, StampTex, Hardness, Layers);
             Destroy(gameObject);

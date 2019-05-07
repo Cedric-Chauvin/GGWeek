@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6508591311210008591}
   - component: {fileID: 6508591311210008590}
   m_Layer: 0
-  m_Name: bombe
+  m_Name: bombe 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Layers:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 512
   StampTex: {fileID: 2800000, guid: 754f453c581845f47b35cd21c8341311, type: 3}
   Size: {x: 3, y: 3}
   Angle: 0
