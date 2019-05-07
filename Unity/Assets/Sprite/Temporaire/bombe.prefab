@@ -141,3 +141,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8553cafe847a80d4896f9d5e5c8b2a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  layerSelect: 8

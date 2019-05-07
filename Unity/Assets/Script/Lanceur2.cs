@@ -1,14 +1,16 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Lanceur : MonoBehaviour
+public class Lanceur2 : MonoBehaviour
 {
     GameObject a;
     public GameObject bombe;
     public Transform fleche;
     public float rotationSpeed = 10.0f;
     private float rotationSpeedSign = 1f;
+    public int angleMin;
+    public int angleMax;
 
     private void Awake()
     {
@@ -41,7 +43,7 @@ public class Lanceur : MonoBehaviour
         {
             rotationSpeedSign = -1f;
         }
-        else if(angle <= -30)
+        else if (angle <= -30)
         {
             rotationSpeedSign = 1f;
         }
@@ -57,9 +59,9 @@ public class Lanceur : MonoBehaviour
 
     void Shoot()
     {
-        GameObject instance = Instantiate(bombe, a.transform.position,transform.rotation);
+        GameObject instance = Instantiate(bombe, a.transform.position, transform.rotation);
         Rigidbody2D rb = instance.GetComponent<Rigidbody2D>();
-        rb.velocity += new Vector2((fleche.position - transform.position).x,(fleche.position - transform.position).y)*2;
+        rb.velocity += new Vector2((-fleche.position - transform.position).x, (fleche.position - transform.position).y) * 2;
         Destroy(instance, 5);
     }
 
