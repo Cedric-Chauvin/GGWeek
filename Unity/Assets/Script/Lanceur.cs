@@ -36,7 +36,6 @@ public class Lanceur : MonoBehaviour
             angle -= 360;
         }
 
-        Debug.Log(angle);
         if (angle >= 30)
         {
             rotationSpeedSign = -1f;
