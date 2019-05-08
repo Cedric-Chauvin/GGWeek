@@ -1,14 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Lanceur : MonoBehaviour
 {
     GameObject a;
+    public string shotInput;
     public GameObject bombe;
+    public GameObject bombeFrag;
     public Transform fleche;
     public float rotationSpeed = 10.0f;
+    public float timepowerMax = 5;
+    public float maxpower = 10;
+    public Image bar;
+
     private float rotationSpeedSign = 1f;
+    private bool isCharging;
+    private float timerPower;
 
     private void Awake()
     {
@@ -23,9 +32,22 @@ public class Lanceur : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isCharging && timerPower < timepowerMax)
+        {
+            timerPower += Time.deltaTime;
+            bar.fillAmount = timerPower / timepowerMax;
+        }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetButtonDown(shotInput))
+            isCharging = true;
+
+        if (Input.GetButtonUp(shotInput))
+        {
+            isCharging = false;
+            bar.fillAmount = 0;
             Shoot();
+            timerPower = 0;
+        }
 
         fleche.RotateAround(transform.position, Vector3.forward, rotationSpeed * rotationSpeedSign);
 
@@ -45,20 +67,15 @@ public class Lanceur : MonoBehaviour
             rotationSpeedSign = 1f;
         }
 
-        /*if (Input.GetButton("Vertical"))
-        {
-            if(Input.GetAxis("Vertical")>0)
-                fleche.RotateAround(transform.position, Vector3.forward, 10);
-            else
-                fleche.RotateAround(transform.position, Vector3.forward, -10);
-        }*/
     }
 
     void Shoot()
     {
+        Vector2 velocity = Vector2.Lerp((fleche.position - transform.position).normalized, (fleche.position - transform.position).normalized * maxpower, timerPower / timepowerMax);
+
         GameObject instance = Instantiate(bombe, a.transform.position,transform.rotation);
         Rigidbody2D rb = instance.GetComponent<Rigidbody2D>();
-        rb.velocity += new Vector2((fleche.position - transform.position).x,(fleche.position - transform.position).y)*2;
+        rb.velocity += velocity;
         Destroy(instance, 5);
     }
 

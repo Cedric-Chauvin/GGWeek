@@ -60,7 +60,7 @@ public class Lanceur2 : MonoBehaviour
     {
         GameObject instance = Instantiate(bombe, a.transform.position, transform.rotation);
         Rigidbody2D rb = instance.GetComponent<Rigidbody2D>();
-        rb.velocity += new Vector2((-fleche.position - transform.position).x, (fleche.position - transform.position).y) * 2;
+        rb.velocity += new Vector2((fleche.position - transform.position).x, (fleche.position - transform.position).y) * 2;
         Destroy(instance, 5);
     }
 

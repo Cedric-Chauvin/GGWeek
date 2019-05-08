@@ -39,10 +39,18 @@ public class bombe : MonoBehaviour
     {
         if (Layers == (Layers | (1 << collision.gameObject.layer)))
         {
-            D2dDestructible.StampAll(transform.position, Size, Angle, StampTex, Hardness, Layers);
+            D2dDestructible.StampAll(transform.position, Size*transform.localScale, Angle, StampTex, Hardness, Layers);
             Transform instance = Instantiate(explode,transform.position,transform.rotation);
+            instance.localScale = transform.localScale * Size;
             Destroy(instance.gameObject, 1);
             Destroy(gameObject);
         }
+    }
+
+    private void OnDestroy()
+    {
+        Transform instance = Instantiate(explode, transform.position, transform.rotation);
+        instance.localScale = transform.localScale * Size;
+        Destroy(instance.gameObject, 1);
     }
 }
