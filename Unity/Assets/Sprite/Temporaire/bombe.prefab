@@ -144,7 +144,8 @@ MonoBehaviour:
   Layers:
     serializedVersion: 2
     m_Bits: 256
-  StampTex: {fileID: 2800000, guid: 754f453c581845f47b35cd21c8341311, type: 3}
-  Size: {x: 3, y: 3}
+  StampTex: {fileID: 2800000, guid: fff692f0cc1402b4fb2502a32d2261c5, type: 3}
+  Size: {x: 2, y: 2}
   Angle: 0
   Hardness: 1
+  explode: {fileID: 6670741638615145186, guid: 32cc818bcf99a3e47876dc13a06ed64b, type: 3}

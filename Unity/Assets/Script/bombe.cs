@@ -21,7 +21,7 @@ public class bombe : MonoBehaviour
     [Tooltip("The hardness of the stamp")]
     public float Hardness = 1.0f;
 
-    Transform explode;
+    public Transform explode;
 
     private void Awake()
     {
@@ -40,6 +40,8 @@ public class bombe : MonoBehaviour
         if (Layers == (Layers | (1 << collision.gameObject.layer)))
         {
             D2dDestructible.StampAll(transform.position, Size, Angle, StampTex, Hardness, Layers);
+            Transform instance = Instantiate(explode,transform.position,transform.rotation);
+            Destroy(instance.gameObject, 1);
             Destroy(gameObject);
         }
     }
