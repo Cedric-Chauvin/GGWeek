@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class bombe : MonoBehaviour
 {
+    Rigidbody2D rb;
+    public GameObject victory;
 
     [Tooltip("The GameObject layers this can stamp")]
     public LayerMask Layers = -1;
@@ -25,9 +27,8 @@ public class bombe : MonoBehaviour
 
     private void Awake()
     {
-
+        rb = GetComponent<Rigidbody2D>();
     }
-
 
     // Update is called once per frame
     void Update()
@@ -45,6 +46,14 @@ public class bombe : MonoBehaviour
             Destroy(instance.gameObject, 1);
             Destroy(gameObject);
         }
+
+        if (collision.gameObject.tag == "tank2")
+        {
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+            Instantiate(victory);
+        }
+
     }
 
     private void OnDestroy()

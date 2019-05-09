@@ -54,7 +54,12 @@ public class Lanceur2 : MonoBehaviour
             else
                 fleche.RotateAround(transform.position, Vector3.forward, -10);
         }*/
+
+
+
     }
+
+   
 
     void Shoot()
     {
