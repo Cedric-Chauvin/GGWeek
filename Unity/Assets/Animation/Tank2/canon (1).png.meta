@@ -1,7 +1,10 @@
 fileFormatVersion: 2
 guid: 2420fed53a464004b936524ef8a76a54
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -1981210355327878556
+    second: canon (1)_0
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -82,11 +85,32 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: canon (1)_0
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 455
+        width: 169
+        height: 67
+      alignment: 9
+      pivot: {x: -0.24214606, y: 0.17152382}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e611e2d6d69292e409bc4e075bc42b85
+      internalID: -1981210355327878556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 43107692ffb369344947a9c2f3e13836
+    spriteID: b4e59d9134d60494bbf5ae86e84dc633
     internalID: 0
     vertices: []
     indices: 

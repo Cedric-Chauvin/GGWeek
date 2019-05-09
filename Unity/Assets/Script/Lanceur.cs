@@ -29,6 +29,7 @@ public class Lanceur : MonoBehaviour
     private float angleMax;
     private float angleMin;
 
+    private bool useMulti;
     private bool isEnergie;
     private bool needRepair;
     private CHARGESTATE button;
@@ -73,6 +74,7 @@ public class Lanceur : MonoBehaviour
             
         }
         RotationFleche();
+        Debug.Log(energie);
     }
 
     private void Fix()
@@ -142,7 +144,7 @@ public class Lanceur : MonoBehaviour
 
     private void RotationFleche()
     {
-        fleche.RotateAround(transform.position, Vector3.forward, Setup.rotationSpeed * rotationSpeedSign);
+        fleche.Rotate(Vector3.forward, Setup.rotationSpeed * rotationSpeedSign);
 
         float angle = fleche.eulerAngles.z;
 
@@ -163,7 +165,7 @@ public class Lanceur : MonoBehaviour
 
     void Shoot(GameObject bombe)
     {
-        Vector2 velocity = (fleche.position - transform.position).normalized * Setup.power;
+        Vector2 velocity = (-fleche.position +a.transform.position).normalized * Setup.power;
         energie -= (timerPower / Setup.timeMaxNormal) * Setup.maxEnergie;
         if (energie < 0)
         {
