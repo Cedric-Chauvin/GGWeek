@@ -33,7 +33,8 @@ public class bombe : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        float angle = Vector2.SignedAngle(Vector2.left, rb.velocity.normalized);
+        transform.rotation= Quaternion.Euler( new Vector3(0, 0, angle));
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

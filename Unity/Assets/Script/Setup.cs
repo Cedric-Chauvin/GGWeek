@@ -11,7 +11,8 @@ public class Setup : MonoBehaviour
     public static float power = 5;
     public static float energieSpeed;
     public static float timeInput;
-    public static float maxEnergie;
+    public static float maxEnergieNormal;
+    public static float maxEnergieFrag;
     public static float malusEnergie;
     public static float maxRadius;
 
@@ -22,7 +23,8 @@ public class Setup : MonoBehaviour
     public float Power = 10;
     public float EnergieSpeed;
     public float TimeInput;
-    public float MaxCostEnergie;
+    public float MaxCostEnergieNormal;
+    public float MaxCostEnergieFrag;
     public float MalusEnergie;
     public float MaxRadius;
 
@@ -35,7 +37,8 @@ public class Setup : MonoBehaviour
         power = Power;
         energieSpeed = EnergieSpeed;
         timeInput = TimeInput;
-        maxEnergie = MaxCostEnergie;
+        maxEnergieNormal = MaxCostEnergieNormal;
+        maxEnergieFrag = MaxCostEnergieFrag;
         malusEnergie = MalusEnergie;
         maxRadius = MaxRadius;
     }

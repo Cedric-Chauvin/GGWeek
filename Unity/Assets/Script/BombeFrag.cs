@@ -45,6 +45,7 @@ public class BombeFrag : MonoBehaviour
         {
             D2dDestructible.StampAll(transform.position, Size, Angle, StampTex, Hardness, Layers);
             Transform instance = Instantiate(explode, transform.position, transform.rotation);
+            instance.localScale = transform.localScale * Size;
             Destroy(instance.gameObject, 1);
 
             for(int i =0; i < nbFragmentation; i++)
@@ -56,7 +57,7 @@ public class BombeFrag : MonoBehaviour
                     dir -= 90;
 
                 Transform newBombe = Instantiate(bombe, transform.position, transform.rotation);
-                newBombe.localScale /= 2;
+                newBombe.localScale = (transform.localScale*Size)/2;
                 newBombe.GetComponent<Rigidbody2D>().velocity = Quaternion.Euler(0, 0, dir) * rb.velocity;
                 Destroy(newBombe.gameObject, 1);
             }

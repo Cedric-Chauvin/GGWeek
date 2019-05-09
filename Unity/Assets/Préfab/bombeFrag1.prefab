@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 816124644305037321}
   - component: {fileID: 816124644305037317}
   - component: {fileID: 3049278763179063624}
-  - component: {fileID: 2753619637350703035}
+  - component: {fileID: 8257070446679519112}
   m_Layer: 0
   m_Name: bombeFrag1
   m_TagString: Untagged
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 816124644305037322}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.21, y: -2.38, z: 0}
-  m_LocalScale: {x: 0.19, y: 0.19, z: 0.279}
+  m_LocalScale: {x: 0.03, y: 0.03, z: 0.3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -71,12 +71,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7e9cec3565f3bbe4cbebf767a704faf4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 774c3836fb80f404cbee80ac24a8b14b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 7.2, y: 7.2}
+  m_Size: {x: 41.670002, y: 41.670002}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -125,8 +125,8 @@ MonoBehaviour:
   bombe: {fileID: 6508591311210008577, guid: 77b6089c172df8e4783253ed4117cfa1, type: 3}
   explode: {fileID: 6670741638615145186, guid: 32cc818bcf99a3e47876dc13a06ed64b, type: 3}
   nbFragmentation: 10
---- !u!58 &2753619637350703035
-CircleCollider2D:
+--- !u!61 &8257070446679519112
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -138,6 +138,16 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 4.6503916, y: -0.40435314}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 41.670002, y: 41.670002}
+    newSize: {x: 41.670002, y: 41.670002}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 2
+  m_Size: {x: 24.605055, y: 8.6725}
+  m_EdgeRadius: 0

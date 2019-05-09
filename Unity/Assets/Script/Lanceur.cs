@@ -73,6 +73,8 @@ public class Lanceur : MonoBehaviour
             malusBar.fillAmount = (malusAmont - energie) / malusAmont;
             
         }
+        if (Input.GetButtonDown(input.Multi))
+            useMulti = true;
         RotationFleche();
         Debug.Log(energie);
     }
@@ -166,13 +168,23 @@ public class Lanceur : MonoBehaviour
     void Shoot(GameObject bombe)
     {
         Vector2 velocity = (-fleche.position +a.transform.position).normalized * Setup.power;
-        energie -= (timerPower / Setup.timeMaxNormal) * Setup.maxEnergie;
+        GameObject instance;
+        if (useMulti)
+        {
+            instance = Instantiate(bombeFrag, a.transform.position, transform.rotation);
+            energie -= (timerPower / Setup.timeMaxNormal) * Setup.maxEnergieFrag;
+            useMulti = false;
+        }
+        else
+        {
+            instance = Instantiate(bombe, a.transform.position, transform.rotation);
+            energie -= (timerPower / Setup.timeMaxNormal) * Setup.maxEnergieNormal;
+        }
         if (energie < 0)
         {
             energie = energie * Setup.malusEnergie;
             malusAmont = energie;
         }
-        GameObject instance = Instantiate(bombe, a.transform.position,transform.rotation);
         instance.transform.localScale = instance.transform.localScale * ((timerPower / Setup.timeMaxNormal)+1);
         Rigidbody2D rb = instance.GetComponent<Rigidbody2D>();
         rb.velocity += velocity;
