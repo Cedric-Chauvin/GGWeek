@@ -1301,11 +1301,11 @@ MonoBehaviour:
   TimeMaxNormal: 5
   MinPowerNormal: 5
   MaxPowerNormal: 20
-  LoadTimeNormal: 0
-  TimeMaxFrag: 5
-  MinPowerFrag: 5
-  MaxPowerFrag: 20
-  LoadTimeFrag: 0
+  FixSpeed: 5
+  EnergieSpeed: 5
+  TimeInput: 10
+  Maxenergie: 5
+  MalusEnergie: 2
 --- !u!4 &1403061185
 Transform:
   m_ObjectHideFlags: 0
@@ -1629,5 +1629,21 @@ PrefabInstance:
       propertyPath: shotInput
       value: P1Fire1
       objectReference: {fileID: 0}
+    - target: {fileID: 6406662448487872081, guid: 99cceafa2954b614ea7e4959cc912355,
+        type: 3}
+      propertyPath: chargeBar
+      value: 
+      objectReference: {fileID: 2072970226}
+    - target: {fileID: 6406662448487872081, guid: 99cceafa2954b614ea7e4959cc912355,
+        type: 3}
+      propertyPath: energieBar
+      value: 
+      objectReference: {fileID: 1972397421}
+    - target: {fileID: 6406662448487872081, guid: 99cceafa2954b614ea7e4959cc912355,
+        type: 3}
+      propertyPath: bombe
+      value: 
+      objectReference: {fileID: 6508591311210008579, guid: 77b6089c172df8e4783253ed4117cfa1,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99cceafa2954b614ea7e4959cc912355, type: 3}

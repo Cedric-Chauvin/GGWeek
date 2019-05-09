@@ -8,25 +8,23 @@ public class Setup : MonoBehaviour
     public static float minAngle = -30;
     public static float rotationSpeed=1;
     public static float timeMaxNormal=5;
-    public static float minPowerNormal=5;
-    public static float maxPowerNormal=20;
-    public static float loadTimeNormal;
-    public static float timeMaxFrag=5;
-    public static float minPowerFrag=5;
-    public static float maxPowerFrag=20;
-    public static float loadTimeFrag;
+    public static float power = 5;
+    public static float energieSpeed;
+    public static float timeInput;
+    public static float maxEnergie;
+    public static float malusEnergie;
+    public static float maxRadius;
 
     public float MaxAngle = 30;
     public float MinAngle = -30;
     public float RotationSpeed = 1;
     public float TimeMaxNormal = 5;
-    public float MinPowerNormal = 5;
-    public float MaxPowerNormal = 20;
-    public float LoadTimeNormal;
-    public float TimeMaxFrag = 5;
-    public float MinPowerFrag = 5;
-    public float MaxPowerFrag = 20;
-    public float LoadTimeFrag;
+    public float Power = 10;
+    public float EnergieSpeed;
+    public float TimeInput;
+    public float MaxCostEnergie;
+    public float MalusEnergie;
+    public float MaxRadius;
 
     private void Awake()
     {
@@ -34,13 +32,12 @@ public class Setup : MonoBehaviour
         minAngle = MinAngle;
         rotationSpeed = RotationSpeed;
         timeMaxNormal = TimeMaxNormal;
-        minPowerNormal = MinPowerNormal;
-        maxPowerNormal = MaxPowerNormal;
-        loadTimeNormal = LoadTimeNormal;
-        timeMaxFrag = TimeMaxFrag;
-        minPowerFrag = MinPowerFrag;
-        maxPowerFrag = MaxPowerFrag;
-        loadTimeFrag = LoadTimeFrag;
+        power = Power;
+        energieSpeed = EnergieSpeed;
+        timeInput = TimeInput;
+        maxEnergie = MaxCostEnergie;
+        malusEnergie = MalusEnergie;
+        maxRadius = MaxRadius;
     }
 
 }
