@@ -68,7 +68,7 @@ public class BombeFrag : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (transform.name == "bombeFrag 1")
+        if (transform.name == "bombe1")
         {
             if (collision.gameObject.tag == "tank2" )
             {
@@ -77,7 +77,7 @@ public class BombeFrag : MonoBehaviour
                 Instantiate(victory);
             }
         }
-        else if (transform.name == "bombeFrag 2")
+        else if (transform.name == "bombe2")
         {
             if (collision.gameObject.tag == "tank1" )
             {

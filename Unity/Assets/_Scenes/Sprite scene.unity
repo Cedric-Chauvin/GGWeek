@@ -245,17 +245,18 @@ MonoBehaviour:
   MaxAngle: 85
   MinAngle: 0
   RotationSpeed: 1
-  TimeMaxNormal: 5
+  TimeMaxNormal: 3
   Power: 10
-  EnergieSpeed: 3
+  EnergieSpeed: 1.25
   TimeInput: 5
-  MaxCostEnergieNormal: 20
+  MaxCostEnergieNormal: 30
   MaxCostEnergieFrag: 80
   MalusEnergie: 2
   MaxRadius: 5
   HauteurMur: 5.75
   SpeedMur: 15
   TimeMur: 1
+  Energiecons: 40
 --- !u!1001 &169333996
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -516,7 +517,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &201129239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5973,7 +5974,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!60 &1984081039
 PolygonCollider2D:
   m_ObjectHideFlags: 0

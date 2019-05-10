@@ -80,7 +80,6 @@ public class Lanceur : MonoBehaviour
         if (energie > 0)
         {
             Fire();
-            Shield();
             malusBar.fillAmount = 0;
         }
         else
@@ -88,7 +87,7 @@ public class Lanceur : MonoBehaviour
             malusBar.fillAmount = energie / malusAmont;
 
         }
-
+        Shield();
         RotationFleche();
     }
 
@@ -97,7 +96,7 @@ public class Lanceur : MonoBehaviour
         if (shield && timerMur < Setup.timeMur)
             timerMur += Time.deltaTime;
 
-        if (Input.GetButtonDown(input.Shield)&&!shielded)
+        if (Input.GetButtonDown(input.Shield)&&!shielded && energie>0)
         {
             shielded = true;
             timerMur = 0;

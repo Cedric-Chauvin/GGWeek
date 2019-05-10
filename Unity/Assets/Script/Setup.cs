@@ -34,7 +34,7 @@ public class Setup : MonoBehaviour
     public float HauteurMur;
     public float SpeedMur;
     public float TimeMur;
-    public float Energiecons;
+    public float Energiecons=40;
 
     private void Awake()
     {

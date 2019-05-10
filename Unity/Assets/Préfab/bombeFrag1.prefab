@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8257070446679519112}
   m_Layer: 0
   m_Name: bombeFrag1
-  m_TagString: tank1
+  m_TagString: bombe1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -124,7 +124,7 @@ MonoBehaviour:
   Hardness: 1
   bombe: {fileID: 6508591311210008577, guid: 77b6089c172df8e4783253ed4117cfa1, type: 3}
   explode: {fileID: 6670741638615145186, guid: 32cc818bcf99a3e47876dc13a06ed64b, type: 3}
-  nbFragmentation: 1
+  nbFragmentation: 5
   victory: {fileID: 789283076904921685, guid: 94725ff378ba8dd4099ec6aeeeed5697, type: 3}
 --- !u!61 &8257070446679519112
 BoxCollider2D:

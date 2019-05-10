@@ -46,7 +46,7 @@ public class bombe : MonoBehaviour
             D2dDestructible.StampAll(transform.position, Size*transform.localScale, Angle, StampTex, Hardness, Layers);
             Destroy(gameObject);
         }
-        if (transform.gameObject.tag == "tank1")
+        if (transform.gameObject.tag == "bombe1")
         {
             if (collision.gameObject.tag == "tank2" )
             {
@@ -54,7 +54,7 @@ public class bombe : MonoBehaviour
                 Destroy(gameObject);
                 Instantiate(victory);
             }
-        }else if(transform.gameObject.tag == "tank2")
+        }else if(transform.gameObject.tag == "bombe2")
         {
             if (collision.gameObject.tag == "tank1" )
             {
