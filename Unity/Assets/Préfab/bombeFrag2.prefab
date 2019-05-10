@@ -12,6 +12,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bombeFrag2
       objectReference: {fileID: 0}
+    - target: {fileID: 816124644305037322, guid: 4662e48441b7ce14f94733c8785dfd5a,
+        type: 3}
+      propertyPath: m_TagString
+      value: tank2
+      objectReference: {fileID: 0}
     - target: {fileID: 816124644305037320, guid: 4662e48441b7ce14f94733c8785dfd5a,
         type: 3}
       propertyPath: m_LocalPosition.x
