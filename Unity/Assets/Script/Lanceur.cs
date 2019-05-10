@@ -22,6 +22,7 @@ public class Lanceur : MonoBehaviour
     public Image energieBar;
     public Image malusBar;
     public Transform shield;
+    public Transform fumée;
 
     private float rotationSpeedSign = 1f;
     private bool isCharging;
@@ -79,6 +80,7 @@ public class Lanceur : MonoBehaviour
         if (energie > 0)
         {
             Fire();
+            Shield();
             malusBar.fillAmount = 0;
         }
         else
@@ -88,7 +90,6 @@ public class Lanceur : MonoBehaviour
         }
 
         RotationFleche();
-        Shield();
     }
 
     private void Shield()
@@ -96,11 +97,14 @@ public class Lanceur : MonoBehaviour
         if (shield && timerMur < Setup.timeMur)
             timerMur += Time.deltaTime;
 
-        if (Input.GetButtonDown(input.Shield))
+        if (Input.GetButtonDown(input.Shield)&&!shielded)
         {
             SoundControler._soundControler.PlaySound(SoundControler._soundControler._alarme);
             shielded = true;
             timerMur = 0;
+            Transform fume = Instantiate(fumée);
+            Destroy(fume.gameObject, 0.3f);
+
         }
 
         if (shielded && shield.position.y <= Setup.hauteurMur + initPosShield)
