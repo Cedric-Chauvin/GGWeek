@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8553cafe847a80d4896f9d5e5c8b2a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  victory: {fileID: 3926613732605670630, guid: f7bb096a08d6847469a1053287b41d3e, type: 3}
+  victory: {fileID: 789283076904921685, guid: 94725ff378ba8dd4099ec6aeeeed5697, type: 3}
   Layers:
     serializedVersion: 2
     m_Bits: 4608

@@ -77,5 +77,11 @@ PrefabInstance:
       propertyPath: Layers.m_Bits
       value: 4352
       objectReference: {fileID: 0}
+    - target: {fileID: 6508591311210008590, guid: 77b6089c172df8e4783253ed4117cfa1,
+        type: 3}
+      propertyPath: victory
+      value: 
+      objectReference: {fileID: 1389042563140313760, guid: d30ea671ce320d646a4fa1f8b5e472b0,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77b6089c172df8e4783253ed4117cfa1, type: 3}

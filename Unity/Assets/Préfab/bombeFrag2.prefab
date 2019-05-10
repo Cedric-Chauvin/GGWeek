@@ -83,5 +83,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 486152865750359164, guid: 63af715e92847ee45bb3e9826e6d3da4,
         type: 3}
+    - target: {fileID: 3049278763179063624, guid: 4662e48441b7ce14f94733c8785dfd5a,
+        type: 3}
+      propertyPath: victory
+      value: 
+      objectReference: {fileID: 1389042563140313760, guid: d30ea671ce320d646a4fa1f8b5e472b0,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4662e48441b7ce14f94733c8785dfd5a, type: 3}
