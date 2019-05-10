@@ -18,6 +18,7 @@ public class Setup : MonoBehaviour
     public static float hauteurMur;
     public static float speedMur;
     public static float timeMur;
+    public static float energiecons;
 
     public float MaxAngle = 30;
     public float MinAngle = -30;
@@ -33,6 +34,7 @@ public class Setup : MonoBehaviour
     public float HauteurMur;
     public float SpeedMur;
     public float TimeMur;
+    public float Energiecons;
 
     private void Awake()
     {
@@ -50,6 +52,7 @@ public class Setup : MonoBehaviour
         hauteurMur = HauteurMur;
         speedMur = SpeedMur;
         timeMur = TimeMur;
+        energiecons = Energiecons;
     }
 
 }

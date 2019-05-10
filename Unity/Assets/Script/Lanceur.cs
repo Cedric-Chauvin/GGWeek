@@ -99,13 +99,18 @@ public class Lanceur : MonoBehaviour
 
         if (Input.GetButtonDown(input.Shield)&&!shielded)
         {
-            SoundControler._soundControler.PlaySound(SoundControler._soundControler._alarme);
             shielded = true;
             timerMur = 0;
             Transform fume = Instantiate(fumée);
             Destroy(fume.gameObject, 0.3f);
-
+            energie -= Setup.energiecons;
+            if (energie < 0)
+            {
+                energie = energie * Setup.malusEnergie;
+                malusAmont = energie;
+            }
         }
+
 
         if (shielded && shield.position.y <= Setup.hauteurMur + initPosShield)
             shield.Translate(0, Setup.speedMur * Time.deltaTime, 0);
@@ -212,20 +217,17 @@ public class Lanceur : MonoBehaviour
         GameObject instance;
         if (useMulti)
         {
-            SoundControler._soundControler.PlaySound(SoundControler._soundControler._fireShot2);
             instance = Instantiate(bombeFrag, a.transform.position, transform.rotation);
             energie -= (timerPower / Setup.timeMaxNormal) * Setup.maxEnergieFrag;
             useMulti = false;
         }
         else
         {
-            SoundControler._soundControler.PlaySound(SoundControler._soundControler._fireShot);
             instance = Instantiate(bombe, a.transform.position, transform.rotation);
             energie -= (timerPower / Setup.timeMaxNormal) * Setup.maxEnergieNormal;
         }
         if (energie < 0)
         {
-            SoundControler._soundControler.PlaySound(SoundControler._soundControler._electricite);
             energie = energie * Setup.malusEnergie;
             malusAmont = energie;
         }
