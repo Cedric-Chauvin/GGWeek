@@ -24,10 +24,12 @@ public class bombe : MonoBehaviour
     public float Hardness = 1.0f;
 
     public Transform explode;
+    private Animator anim ;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = Camera.main.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -42,9 +44,6 @@ public class bombe : MonoBehaviour
         if (Layers == (Layers | (1 << collision.gameObject.layer)))
         {
             D2dDestructible.StampAll(transform.position, Size*transform.localScale, Angle, StampTex, Hardness, Layers);
-            Transform instance = Instantiate(explode,transform.position,transform.rotation);
-            instance.localScale = transform.localScale * Size;
-            Destroy(instance.gameObject, 1);
             Destroy(gameObject);
         }
 
@@ -59,6 +58,7 @@ public class bombe : MonoBehaviour
 
     private void OnDestroy()
     {
+        anim.SetTrigger("Shake");
         Transform instance = Instantiate(explode, transform.position, transform.rotation);
         instance.localScale = transform.localScale * Size;
         Destroy(instance.gameObject, 1);

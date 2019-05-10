@@ -221,7 +221,7 @@ public class Lanceur : MonoBehaviour
             energie = energie * Setup.malusEnergie;
             malusAmont = energie;
         }
-        instance.transform.localScale = instance.transform.localScale * ((timerPower / Setup.timeMaxNormal)+1);
+        instance.transform.localScale = instance.transform.localScale * ((timerPower / Setup.timeMaxNormal)+0.5f);
         Rigidbody2D rb = instance.GetComponent<Rigidbody2D>();
         rb.velocity += velocity;
         Destroy(instance, 5);

@@ -1,0 +1,389 @@
+fileFormatVersion: 2
+guid: 58139089c33230449ba4f7201c913c89
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3390394417416767461
+    second: fumeesprite_0
+  - first:
+      213: -144884274741447826
+    second: fumeesprite_1
+  - first:
+      213: -2751072690355507406
+    second: fumeesprite_2
+  - first:
+      213: -3566287958365652893
+    second: fumeesprite_3
+  - first:
+      213: 4470470461957195211
+    second: fumeesprite_4
+  - first:
+      213: 989020341761195683
+    second: fumeesprite_5
+  - first:
+      213: 4634342212634585568
+    second: fumeesprite_6
+  - first:
+      213: -4780938558253998498
+    second: fumeesprite_7
+  - first:
+      213: -5671134078491712670
+    second: fumeesprite_8
+  - first:
+      213: 3222869259788149222
+    second: fumeesprite_9
+  - first:
+      213: -3909538649064689054
+    second: fumeesprite_10
+  - first:
+      213: 6619388176877820211
+    second: fumeesprite_11
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fumeesprite_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 925.3334
+        width: 500
+        height: 462.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 605857ef3e7463a47963aaaac29d7422
+      internalID: -3390394417416767461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fumeesprite_1
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 925.3334
+        width: 500
+        height: 462.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8c48b7879da6b64faf5a406ad41984b
+      internalID: -144884274741447826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fumeesprite_2
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 925.3334
+        width: 500
+        height: 462.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b0de7f692347874e9f81ba61cb7a341
+      internalID: -2751072690355507406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fumeesprite_3
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 925.3334
+        width: 500
+        height: 462.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf62b12237803694a87269c44c47e5f1
+      internalID: -3566287958365652893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fumeesprite_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 463.33334
+        width: 500
+        height: 462.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 128319ece1f9f3745b7ba606be5da9fb
+      internalID: 4470470461957195211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fumeesprite_5
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 463.33334
+        width: 500
+        height: 462.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a71621249d2e224181e26e6f8cde0b4
+      internalID: 989020341761195683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fumeesprite_6
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 463.33334
+        width: 500
+        height: 462.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a022d47ec1af0449a318039714a89b3
+      internalID: 4634342212634585568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fumeesprite_7
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 463.33334
+        width: 500
+        height: 462.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1089edfb0977e5546a574d09d82738c1
+      internalID: -4780938558253998498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fumeesprite_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1.3333435
+        width: 500
+        height: 462.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe51883269ecede4dbff6095c52379ba
+      internalID: -5671134078491712670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fumeesprite_9
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1.3333435
+        width: 500
+        height: 462.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a2c4882ff40a004e9560b3abff5bd0d
+      internalID: 3222869259788149222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fumeesprite_10
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1.3333435
+        width: 500
+        height: 462.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e92c13a592f642247ba008de8061e3b9
+      internalID: -3909538649064689054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fumeesprite_11
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 1.3333435
+        width: 500
+        height: 462.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4946a6c3179c8ad4c987a269b3373a7c
+      internalID: 6619388176877820211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: f35e3a6f1a4440740835d3ccbd490b3f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
