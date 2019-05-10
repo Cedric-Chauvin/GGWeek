@@ -47,7 +47,7 @@ public class bombe : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (collision.gameObject.tag == "tank2")
+        if (collision.gameObject.tag == "tank2" || collision.gameObject.tag == "tank1")
         {
             Destroy(collision.gameObject);
             Destroy(gameObject);
@@ -59,6 +59,7 @@ public class bombe : MonoBehaviour
     private void OnDestroy()
     {
         anim.SetTrigger("Shake");
+        SoundControler._soundControler.PlaySound(SoundControler._soundControler._bomb);
         Transform instance = Instantiate(explode, transform.position, transform.rotation);
         instance.localScale = transform.localScale * Size;
         Destroy(instance.gameObject, 1);

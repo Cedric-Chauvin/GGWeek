@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class SoundControler : MonoBehaviour {
 
-    public AudioClip _loupDeath;
-    public AudioClip _gameOver;
-    public AudioClip _victory;
-    public AudioClip _tire;
-    public AudioClip _transi1;
-    public AudioClip _transi2;
-    public AudioClip _click;
-    public AudioClip _jobdone;
-    public AudioClip _hit;
+    public AudioClip _alarme;
+    public AudioClip _ambianceGuerre;
+    public AudioClip _bomb;
+    public AudioClip _electricite;
+    public AudioClip _fireShot;
+    public AudioClip _fireShot2;
+    public AudioClip _moteurTank;
+    public AudioClip _reload;
+    public AudioClip _reparation;
     public AudioClip _music;
     public static SoundControler _soundControler;
 
@@ -27,7 +27,7 @@ public class SoundControler : MonoBehaviour {
 
         _source = GetComponent<AudioSource>();
         
-        _source.clip = _music;
+        _source.clip = _ambianceGuerre;
         _source.loop = true;
         _source.Play();
     }

@@ -25,6 +25,7 @@ public class BombeFrag : MonoBehaviour
     public int nbFragmentation;
 
     Rigidbody2D rb;
+    public GameObject victory;
 
 
     private void Awake()
@@ -63,7 +64,16 @@ public class BombeFrag : MonoBehaviour
                 Destroy(newBombe.gameObject, 1);
             }
 
+            SoundControler._soundControler.PlaySound(SoundControler._soundControler._bomb);
             Destroy(gameObject);
         }
+
+        if (collision.gameObject.tag == "tank2" || collision.gameObject.tag == "tank1")
+        {
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+            Instantiate(victory);
+        }
     }
+    
 }
