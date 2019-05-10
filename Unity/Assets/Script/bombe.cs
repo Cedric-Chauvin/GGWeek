@@ -47,7 +47,7 @@ public class bombe : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (collision.gameObject.tag == "tank2" || collision.gameObject.tag == "tank1")
+        if (collision.gameObject.tag == "tank2")
         {
             Destroy(collision.gameObject);
             Destroy(gameObject);
