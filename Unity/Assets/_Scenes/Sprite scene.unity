@@ -846,6 +846,8 @@ GameObject:
   - component: {fileID: 293871054}
   - component: {fileID: 293871053}
   - component: {fileID: 293871056}
+  - component: {fileID: 293871058}
+  - component: {fileID: 293871057}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -938,6 +940,124 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!82 &293871057
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 293871052}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &293871058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 293871052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28ecbd929b4316b44b2744ec57e0af5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _alarme: {fileID: 8300000, guid: 9aec8fdf784779149bde2b094e600b2b, type: 3}
+  _ambianceGuerre: {fileID: 0}
+  _bomb: {fileID: 8300000, guid: b43ea8ddf7ef83e48bf7bd7ad1211bb9, type: 3}
+  _electricite: {fileID: 8300000, guid: 0cd8efe8ad7d40f46b767046d13eb0e8, type: 3}
+  _fireShot: {fileID: 8300000, guid: 7b2077dbca0d42549b71c71234165684, type: 3}
+  _fireShot2: {fileID: 8300000, guid: 3a29c26fb1dd00949854e3a63fd1ade1, type: 3}
+  _moteurTank: {fileID: 8300000, guid: 73347925f5a53364589a6c490585cb1d, type: 3}
+  _reload: {fileID: 8300000, guid: fdfb3577794460a49947e4ce545ef32c, type: 3}
+  _reparation: {fileID: 8300000, guid: a72abc7aa40c6134b82edb9d38df2989, type: 3}
+  _music: {fileID: 0}
 --- !u!1 &310911623
 GameObject:
   m_ObjectHideFlags: 0
@@ -4065,6 +4185,32 @@ MonoBehaviour:
   shield: {fileID: 725303301}
   "fum\xE9e": {fileID: 3328214527498634022, guid: 9ff07a2eb94f40948b0b08a64c8f8e86,
     type: 3}
+--- !u!61 &600380168
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600380163}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.04551363, y: 0.04}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.611911, y: 4.5}
+  m_EdgeRadius: 0
 --- !u!1 &725303297 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 91470897517311086, guid: e333cc5bdc7832d47a389a6d09a1734c,
