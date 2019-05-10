@@ -36,14 +36,15 @@ public class BombeFrag : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        float angle = Vector2.SignedAngle(Vector2.left, rb.velocity.normalized);
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (Layers == (Layers | (1 << collision.gameObject.layer)))
         {
-            D2dDestructible.StampAll(transform.position, Size, Angle, StampTex, Hardness, Layers);
+            D2dDestructible.StampAll(transform.position, Size*transform.localScale, Angle, StampTex, Hardness, Layers);
             Transform instance = Instantiate(explode, transform.position, transform.rotation);
             instance.localScale = transform.localScale * Size;
             Destroy(instance.gameObject, 1);
@@ -57,7 +58,7 @@ public class BombeFrag : MonoBehaviour
                     dir -= 90;
 
                 Transform newBombe = Instantiate(bombe, transform.position, transform.rotation);
-                newBombe.localScale = (transform.localScale*Size)/2;
+                newBombe.localScale = transform.localScale/2;
                 newBombe.GetComponent<Rigidbody2D>().velocity = Quaternion.Euler(0, 0, dir) * rb.velocity;
                 Destroy(newBombe.gameObject, 1);
             }

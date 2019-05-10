@@ -119,12 +119,12 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4608
   StampTex: {fileID: 2800000, guid: fff692f0cc1402b4fb2502a32d2261c5, type: 3}
-  Size: {x: 1.2, y: 1.2}
+  Size: {x: 35, y: 35}
   Angle: 0
   Hardness: 1
   bombe: {fileID: 6508591311210008577, guid: 77b6089c172df8e4783253ed4117cfa1, type: 3}
   explode: {fileID: 6670741638615145186, guid: 32cc818bcf99a3e47876dc13a06ed64b, type: 3}
-  nbFragmentation: 10
+  nbFragmentation: 1
 --- !u!61 &8257070446679519112
 BoxCollider2D:
   m_ObjectHideFlags: 0

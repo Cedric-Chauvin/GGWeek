@@ -15,6 +15,9 @@ public class Setup : MonoBehaviour
     public static float maxEnergieFrag;
     public static float malusEnergie;
     public static float maxRadius;
+    public static float hauteurMur;
+    public static float speedMur;
+    public static float timeMur;
 
     public float MaxAngle = 30;
     public float MinAngle = -30;
@@ -27,6 +30,9 @@ public class Setup : MonoBehaviour
     public float MaxCostEnergieFrag;
     public float MalusEnergie;
     public float MaxRadius;
+    public float HauteurMur;
+    public float SpeedMur;
+    public float TimeMur;
 
     private void Awake()
     {
@@ -41,6 +47,9 @@ public class Setup : MonoBehaviour
         maxEnergieFrag = MaxCostEnergieFrag;
         malusEnergie = MalusEnergie;
         maxRadius = MaxRadius;
+        hauteurMur = HauteurMur;
+        speedMur = SpeedMur;
+        timeMur = TimeMur;
     }
 
 }

@@ -12,6 +12,7 @@ public class Lanceur : MonoBehaviour
     }
 
     GameObject a;
+    GameObject b;
 
     public PLAYER player;
     public GameObject bombe;
@@ -20,6 +21,7 @@ public class Lanceur : MonoBehaviour
     public Image chargeBar;
     public Image energieBar;
     public Image malusBar;
+    public Transform shield;
 
     private float rotationSpeedSign = 1f;
     private bool isCharging;
@@ -37,9 +39,17 @@ public class Lanceur : MonoBehaviour
     private float timerInput;
     private float malusAmont;
 
+    private bool shielded;
+    private float initPosShield;
+    private float timerMur;
+
+    private Animator anim;
+
     private void Awake()
     {
         a = fleche.transform.Find("a").gameObject;
+        initPosShield = shield.position.y;
+        anim = gameObject.GetComponent<Animator>();
     }
 
     // Start is called before the first frame update
@@ -66,17 +76,39 @@ public class Lanceur : MonoBehaviour
     {
 
         Fix();
-        if(energie>0)
+        if (energie > 0)
+        {
             Fire();
+            malusBar.fillAmount = 0;
+        }
         else
         {
-            malusBar.fillAmount = (malusAmont - energie) / malusAmont;
-            
+            malusBar.fillAmount = energie / malusAmont;
+
         }
-        if (Input.GetButtonDown(input.Multi))
-            useMulti = true;
+
         RotationFleche();
-        Debug.Log(energie);
+        Shield();
+    }
+
+    private void Shield()
+    {
+        if (shield && timerMur < Setup.timeMur)
+            timerMur += Time.deltaTime;
+
+        if (Input.GetButtonDown(input.Shield))
+        {
+            shielded = true;
+            timerMur = 0;
+        }
+
+        if (shielded && shield.position.y <= Setup.hauteurMur + initPosShield)
+            shield.Translate(0, Setup.speedMur * Time.deltaTime, 0);
+
+        if (timerMur > Setup.timeMur)
+            shielded = false;
+        if (!shielded && shield.position.y >=  initPosShield)
+            shield.Translate(0, -Setup.speedMur * Time.deltaTime, 0);
     }
 
     private void Fix()
@@ -124,6 +156,9 @@ public class Lanceur : MonoBehaviour
 
     private void Fire()
     {
+        if (Input.GetButtonDown(input.Multi))
+            useMulti = true;
+
         if (Input.GetButtonDown(input.Fire))
             isCharging = true;
 
@@ -167,6 +202,7 @@ public class Lanceur : MonoBehaviour
 
     void Shoot(GameObject bombe)
     {
+        anim.SetTrigger("Shot");
         Vector2 velocity = (-fleche.position +a.transform.position).normalized * Setup.power;
         GameObject instance;
         if (useMulti)
